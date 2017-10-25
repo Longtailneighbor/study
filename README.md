@@ -27,6 +27,7 @@
 - [Kaggle项目实战2—Titanic:Machine learning from disaster—排名Top20%](http://blog.csdn.net/u013691510/article/details/43199085/)
 - [机器学习系列(3)_逻辑回归应用之Kaggle泰坦尼克之灾](http://blog.csdn.net/han_xiaoyang/article/details/49797143)
 
+- [AI行业实践精选: Kaggle竞赛 —— 2017年房价预测](https://xs5.rqiao.net/search?q=%E5%B0%8F%E8%B4%B7++gbdt+github+&oq=%E5%B0%8F%E8%B4%B7++gbdt+github+&gs_l=psy-ab.3...623865.633326.0.633471.13.12.1.0.0.0.458.1053.2-1j1j1.3.0....0...1.1.64.psy-ab..10.0.0....0._RZ2FVzk2PQ)
 - [出行产品未来14个月销量预测【冠军团队】- 贝叶斯部落联盟团队作品](https://mp.weixin.qq.com/s?__biz=MzA3NTg2OTEyMg==&mid=2651931237&idx=1&sn=ecb815fe4b8589b72b88af348d5c3209)
 
 - [硅谷码农用Python写了个机器人，租到了让女友满意的房子]（http://codingpy.com/article/apartment-finding-slackbot/?from=singlemessage&isappinstalled=0）
@@ -52,6 +53,7 @@
 - [玩转数据系列】机器学习算法基于信用卡消费记录做信用评分](https://mp.weixin.qq.com/s?__biz=MzI0OTQyNzEzMQ==&mid=2247484373&idx=1&sn=8cf4e08af2f60f050f4808ed029cf074)
 - [LP真实项目:利用这个模型能够通过商品评论去预测一个商品的销量](https://mp.weixin.qq.com/s?__biz=MzA3MDg0MjgxNQ==&mid=2652391521&idx=1&sn=e73c1fe6fd876bbaabcc046a8973b1ba)
 - [商业银行信用风险内部评级方法与实践【10】——债项评级方法与实践](https://mp.weixin.qq.com/s?__biz=MzA5MjEyMTYwMg==&mid=2650239889&idx=1&sn=a7fd18755ea4d1cd819d99f89942319e)
+-[风险决策引擎](https://wenku.baidu.com/view/de22691b2b160b4e767fcfd1.html)
 ### 探讨
 
 - [如何在 Kaggle 首战中进入前 10%](https://dnc1994.com/2016/04/rank-10-percent-in-first-kaggle-competition/)
