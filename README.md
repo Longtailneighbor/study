@@ -53,7 +53,8 @@
 - [玩转数据系列】机器学习算法基于信用卡消费记录做信用评分](https://mp.weixin.qq.com/s?__biz=MzI0OTQyNzEzMQ==&mid=2247484373&idx=1&sn=8cf4e08af2f60f050f4808ed029cf074)
 - [LP真实项目:利用这个模型能够通过商品评论去预测一个商品的销量](https://mp.weixin.qq.com/s?__biz=MzA3MDg0MjgxNQ==&mid=2652391521&idx=1&sn=e73c1fe6fd876bbaabcc046a8973b1ba)
 - [商业银行信用风险内部评级方法与实践【10】——债项评级方法与实践](https://mp.weixin.qq.com/s?__biz=MzA5MjEyMTYwMg==&mid=2650239889&idx=1&sn=a7fd18755ea4d1cd819d99f89942319e)
--[风险决策引擎](https://wenku.baidu.com/view/de22691b2b160b4e767fcfd1.html)
+- [风险决策引擎](https://wenku.baidu.com/view/de22691b2b160b4e767fcfd1.html)
+- [现金贷风控决策引擎](https://zhuanlan.zhihu.com/p/29281105)(https://zhuanlan.zhihu.com/p/27745691)
 ### 探讨
 
 - [如何在 Kaggle 首战中进入前 10%](https://dnc1994.com/2016/04/rank-10-percent-in-first-kaggle-competition/)
@@ -81,7 +82,7 @@
 ### 文档
 - [sklearn 中文](http://sklearn.lzjqsdd.com/)() 
 - [关于MLWave的Kaggle集合指南文章的代码](https://github.com/MLWave/Kaggle-Ensemble-Guide)
-
+- [统计概念](https://woaielf.github.io/page5/)
 
 ### 比赛地址
 - [UAIS数据大赛](https://www.kddcup2015.com/)
