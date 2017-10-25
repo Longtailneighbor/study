@@ -30,7 +30,16 @@
 - [出行产品未来14个月销量预测【冠军团队】- 贝叶斯部落联盟团队作品](https://mp.weixin.qq.com/s?__biz=MzA3NTg2OTEyMg==&mid=2651931237&idx=1&sn=ecb815fe4b8589b72b88af348d5c3209)
 
 - [硅谷码农用Python写了个机器人，租到了让女友满意的房子]（http://codingpy.com/article/apartment-finding-slackbot/?from=singlemessage&isappinstalled=0）
+- [干货 | 如何用Python和机器学习炒股赚钱？](https://mp.weixin.qq.com/s?__biz=MzA4NzE1NzYyMw==&mid=2247492284&idx=5&sn=d42818577e63a71a648dea1954804cd1)
   
+-[【超级干货！】手把手教你用Python做回归模型预测房价](https://mp.weixin.qq.com/s?__biz=MjM5MDI1ODUyMA==&mid=2672938723&idx=1&sn=b2f6255d021629326e5a14cbc8334e8e)  
+- [挑战百万美金 kaggle-zillow II 数据探索](https://zhuanlan.zhihu.com/p/29190140)
+
+- [数据与人工智能助力互联网信贷业务稳健发展（上）](https://mp.weixin.qq.com/s?__biz=MzA4MjI2MTcwMw==&mid=2650485748&idx=1&sn=b64b6ef32c916c964ce5cefac781a737)
+
+-[大数据与人工智能助力互联网信贷业务稳健发展（下）](https://mp.weixin.qq.com/s?__biz=MzA4MjI2MTcwMw==&mid=2650485751&idx=1&sn=29bdcfa322849ae24f8876efcb1e2a08)
+
+
 ## 小贷公司
 - [基于融360数据的模型构建及用户贷款审批结果预测](https://wenku.baidu.com/view/743221b8a45177232f60a2ef.html)
 - [反欺诈报告](https://mp.weixin.qq.com/s?__biz=MzA3MDg0MjgxNQ==&mid=2652390893&idx=1&sn=a471549d0c9ad1c058d9c788b975609b)
@@ -41,6 +50,8 @@
 - [独家】循序渐进提升Kaggle竞赛模型精确度，以美国好事达保险公司理赔为例](https://mp.weixin.qq.com/s?__biz=MzAxMzA2MDYxMw==&mid=2651560688&idx=1&sn=7a93a9af4e338d1134198a2c65232ed3)
 
 - [玩转数据系列】机器学习算法基于信用卡消费记录做信用评分](https://mp.weixin.qq.com/s?__biz=MzI0OTQyNzEzMQ==&mid=2247484373&idx=1&sn=8cf4e08af2f60f050f4808ed029cf074)
+- [LP真实项目:利用这个模型能够通过商品评论去预测一个商品的销量](https://mp.weixin.qq.com/s?__biz=MzA3MDg0MjgxNQ==&mid=2652391521&idx=1&sn=e73c1fe6fd876bbaabcc046a8973b1ba)
+- [商业银行信用风险内部评级方法与实践【10】——债项评级方法与实践](https://mp.weixin.qq.com/s?__biz=MzA5MjEyMTYwMg==&mid=2650239889&idx=1&sn=a7fd18755ea4d1cd819d99f89942319e)
 ### 探讨
 
 - [如何在 Kaggle 首战中进入前 10%](https://dnc1994.com/2016/04/rank-10-percent-in-first-kaggle-competition/)
@@ -59,6 +70,11 @@
 - [干货｜谷歌大规模机器学习：模型训练、特征工程和算法选择](https://mp.weixin.qq.com/s?__biz=MzIxODM4MjA5MA==&mid=2247484830&idx=1&sn=8c821b9267622e51d75e348220f11f67)
 - [GB和GBDT 算法流程及分析](http://www.cnblogs.com/liuwu265/p/4694191.html)
 - [爬取简书百万页面 分析简书用户画像](http://www.jianshu.com/p/9f8a81040393)
+- [呵呵哒1%](https://zhuanlan.zhihu.com/p/27424282)
+- [聊聊数据挖掘竞赛中的套路与深度学习的局限](https://zhuanlan.zhihu.com/p/28038354)
+- [机器学习（五）--- FTRL一路走来，从LR -> SGD -> TG -> FOBOS -> RDA -> FTRL](http://blog.csdn.net/china1000/article/details/51176654)
+- [干货：图像比赛的通用套路有哪些？Kaggle比赛金牌团队为你解答](https://mp.weixin.qq.com/s?__biz=MjM5ODU3OTIyOA==&mid=2650666086&idx=2&sn=a324768a33e032702d4ac30eeaa039aa)
+- [竞赛大杀器XGBoost，你还可以这样玩~](https://mp.weixin.qq.com/s?__biz=MzAwNjM1ODkxNQ==&mid=2650887653&idx=1&sn=93c803d4b8c0dd5feb894d4f7a529bdd)
 
 ### 文档
 - [sklearn 中文](http://sklearn.lzjqsdd.com/)() 
