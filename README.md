@@ -39,7 +39,7 @@
 - [数据与人工智能助力互联网信贷业务稳健发展（上）](https://mp.weixin.qq.com/s?__biz=MzA4MjI2MTcwMw==&mid=2650485748&idx=1&sn=b64b6ef32c916c964ce5cefac781a737)
 
 -[大数据与人工智能助力互联网信贷业务稳健发展（下）](https://mp.weixin.qq.com/s?__biz=MzA4MjI2MTcwMw==&mid=2650485751&idx=1&sn=29bdcfa322849ae24f8876efcb1e2a08)
-
+-[泰坦尼克](http://blog.csdn.net/han_xiaoyang/article/details/49797143)
 
 ## 小贷公司
 - [基于融360数据的模型构建及用户贷款审批结果预测](https://wenku.baidu.com/view/743221b8a45177232f60a2ef.html)
