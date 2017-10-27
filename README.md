@@ -86,3 +86,8 @@
 
 ### 比赛地址
 - [UAIS数据大赛](https://www.kddcup2015.com/)
+
+2017.10.27 
+  小熊说 和自己对抗每次都做不到，我也是，所以今天来做了记录
+  今天研究个案例，研究下 [知道创宇](http://blog.knownsec.com/Knownsec_RD_Checklist/index.html)
+  感谢小熊，感谢认识到环境的自己。 
