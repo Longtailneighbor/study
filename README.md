@@ -55,6 +55,22 @@
 - [商业银行信用风险内部评级方法与实践【10】——债项评级方法与实践](https://mp.weixin.qq.com/s?__biz=MzA5MjEyMTYwMg==&mid=2650239889&idx=1&sn=a7fd18755ea4d1cd819d99f89942319e)
 - [风险决策引擎](https://wenku.baidu.com/view/de22691b2b160b4e767fcfd1.html)
 - [现金贷风控决策引擎](https://zhuanlan.zhihu.com/p/29281105)(https://zhuanlan.zhihu.com/p/27745691)
+- [Kaggle 數據挖掘比賽經驗分享](http://www.itread01.com/content/1494761044.html)
+- [Kaggle 使用基于Apache Spark的随机森林方法预测贷款风险](http://dataunion.org/25243.html)
+- [信用卡违约预测模型分析以及影响因素探究](https://image.hanspub.org/Html/6-2580195_18568.htm)
+- [天池比赛-口碑商家客流量预测(思路梳理)](https://zhpmatrix.github.io/2017/02/21/ijcai-tianchi/)
+- [大赛 | Kaggle 数据挖掘比赛经验分享](http://m.sohu.com/n/492702267/)
+- [利用LendingClub数据建模](https://zhuanlan.zhihu.com/p/21550547)
+- [XGBoost Plotting API以及GBDT组合特征实践](http://www.tk4479.net/sb19931201/article/details/65445514)
+- [拍拍贷魔镜杯数据产品大赛金奖](http://zhanghonglun.cn/blog/project/%E6%8B%8D%E6%8B%8D%E8%B4%B7%E9%AD%94%E9%95%9C%E6%9D%AF%E6%95%B0%E6%8D%AE%E4%BA%A7%E5%93%81%E5%A4%A7%E8%B5%9B%E9%87%91%E5%A5%96/)
+- [拍拍贷风控预测比赛分享](http://hacker.duanshishi.com/?p=1630)
+- [大数据新算法在个人信用风险评估模型中使用效果的评估](http://bigdata.51cto.com/art/201611/521373.htm)
+- [2015年第四届全国大学生统计建模大赛论文](http://www.sescn.org.cn/zyxx/2015dxsjmgs/edj/B03.pdf)
+- [大数据：特征工程预测用户行为](https://zhuanlan.zhihu.com/p/24954137)
+
+
+
+
 ### 探讨
 
 - [如何在 Kaggle 首战中进入前 10%](https://dnc1994.com/2016/04/rank-10-percent-in-first-kaggle-competition/)
