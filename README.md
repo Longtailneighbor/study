@@ -42,7 +42,7 @@
 -[泰坦尼克](http://blog.csdn.net/han_xiaoyang/article/details/49797143)
 
 ## 小贷公司
-- [基于融360数据的模型构建及用户贷款审批结果预测](https://wenku.baidu.com/view/743221b8a45177232f60a2ef.html)
+- （√）[基于融360数据的模型构建及用户贷款审批结果预测](https://wenku.baidu.com/view/743221b8a45177232f60a2ef.html)
 - [反欺诈报告](https://mp.weixin.qq.com/s?__biz=MzA3MDg0MjgxNQ==&mid=2652390893&idx=1&sn=a471549d0c9ad1c058d9c788b975609b)
 - [逻辑回归的信用评级](https://zhuanlan.zhihu.com/p/25576951)
 - [大数据在保险行业的应用实践](https://mp.weixin.qq.com/s?__biz=MzI3MjU5MzIyOA==&mid=2247483971&idx=1&sn=f52412e83e8ce64df69bd9c677c70ca9)
