@@ -46,7 +46,7 @@
 - （√）[反欺诈报告](http://www.cnblogs.com/yueyebigdata/p/5893454.html)
 - [逻辑回归的信用评级](https://zhuanlan.zhihu.com/p/25576951)
 - [大数据在保险行业的应用实践](https://mp.weixin.qq.com/s?__biz=MzI3MjU5MzIyOA==&mid=2247483971&idx=1&sn=f52412e83e8ce64df69bd9c677c70ca9)
-- [【智慧中国杯】金融赛冠军分享，含PPT源文件](https://mp.weixin.qq.com/s?__biz=MzIwMTgwNjgyOQ==&mid=2247485008&idx=1&sn=ff0ba8045f9eadf4fdbb88d114356e94)
+- （√）[【智慧中国杯】金融赛冠军分享，含PPT源文件](https://mp.weixin.qq.com/s?__biz=MzIwMTgwNjgyOQ==&mid=2247485008&idx=1&sn=ff0ba8045f9eadf4fdbb88d114356e94)
 
 - [独家】循序渐进提升Kaggle竞赛模型精确度，以美国好事达保险公司理赔为例](https://mp.weixin.qq.com/s?__biz=MzAxMzA2MDYxMw==&mid=2651560688&idx=1&sn=7a93a9af4e338d1134198a2c65232ed3)
 
