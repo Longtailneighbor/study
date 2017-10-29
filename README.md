@@ -44,10 +44,10 @@
 ## 小贷公司
 - （√）[基于融360数据的模型构建及用户贷款审批结果预测](https://wenku.baidu.com/view/743221b8a45177232f60a2ef.html)
 - （√）[反欺诈报告](http://www.cnblogs.com/yueyebigdata/p/5893454.html)
-- [逻辑回归的信用评级](https://zhuanlan.zhihu.com/p/25576951)
-- [大数据在保险行业的应用实践](https://mp.weixin.qq.com/s?__biz=MzI3MjU5MzIyOA==&mid=2247483971&idx=1&sn=f52412e83e8ce64df69bd9c677c70ca9)
+- （x）[逻辑回归的信用评级](https://zhuanlan.zhihu.com/p/25576951)
+- （√）[大数据在保险行业的应用实践](https://mp.weixin.qq.com/s?__biz=MzI3MjU5MzIyOA==&mid=2247483971&idx=1&sn=f52412e83e8ce64df69bd9c677c70ca9)
 - （√）[【智慧中国杯】金融赛冠军分享，含PPT源文件](https://mp.weixin.qq.com/s?__biz=MzIwMTgwNjgyOQ==&mid=2247485008&idx=1&sn=ff0ba8045f9eadf4fdbb88d114356e94)
-
+- (√)[GBDT原理及利用GBDT构造新的特征](http://blog.csdn.net/shine19930820/article/details/71713680)
 - [独家】循序渐进提升Kaggle竞赛模型精确度，以美国好事达保险公司理赔为例](https://mp.weixin.qq.com/s?__biz=MzAxMzA2MDYxMw==&mid=2651560688&idx=1&sn=7a93a9af4e338d1134198a2c65232ed3)
 
 - [玩转数据系列】机器学习算法基于信用卡消费记录做信用评分](https://mp.weixin.qq.com/s?__biz=MzI0OTQyNzEzMQ==&mid=2247484373&idx=1&sn=8cf4e08af2f60f050f4808ed029cf074)
