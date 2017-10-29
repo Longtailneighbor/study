@@ -50,10 +50,10 @@
 - (√)[GBDT原理及利用GBDT构造新的特征](http://blog.csdn.net/shine19930820/article/details/71713680)
 - [独家】循序渐进提升Kaggle竞赛模型精确度，以美国好事达保险公司理赔为例](https://mp.weixin.qq.com/s?__biz=MzAxMzA2MDYxMw==&mid=2651560688&idx=1&sn=7a93a9af4e338d1134198a2c65232ed3)
 
-- [玩转数据系列】机器学习算法基于信用卡消费记录做信用评分](https://mp.weixin.qq.com/s?__biz=MzI0OTQyNzEzMQ==&mid=2247484373&idx=1&sn=8cf4e08af2f60f050f4808ed029cf074)
+- （x）[玩转数据系列】机器学习算法基于信用卡消费记录做信用评分](https://mp.weixin.qq.com/s?__biz=MzI0OTQyNzEzMQ==&mid=2247484373&idx=1&sn=8cf4e08af2f60f050f4808ed029cf074)
 - [LP真实项目:利用这个模型能够通过商品评论去预测一个商品的销量](https://mp.weixin.qq.com/s?__biz=MzA3MDg0MjgxNQ==&mid=2652391521&idx=1&sn=e73c1fe6fd876bbaabcc046a8973b1ba)
-- [商业银行信用风险内部评级方法与实践【10】——债项评级方法与实践](https://mp.weixin.qq.com/s?__biz=MzA5MjEyMTYwMg==&mid=2650239889&idx=1&sn=a7fd18755ea4d1cd819d99f89942319e)
-- [风险决策引擎](https://wenku.baidu.com/view/de22691b2b160b4e767fcfd1.html)
+- （√）[商业银行信用风险内部评级方法与实践【10】——债项评级方法与实践](https://mp.weixin.qq.com/s?__biz=MzA5MjEyMTYwMg==&mid=2650239889&idx=1&sn=a7fd18755ea4d1cd819d99f89942319e)
+- （√）[风险决策引擎](https://wenku.baidu.com/view/de22691b2b160b4e767fcfd1.html)
 - [现金贷风控决策引擎](https://zhuanlan.zhihu.com/p/29281105)(https://zhuanlan.zhihu.com/p/27745691)
 - [Kaggle 數據挖掘比賽經驗分享](http://www.itread01.com/content/1494761044.html)
 - [Kaggle 使用基于Apache Spark的随机森林方法预测贷款风险](http://dataunion.org/25243.html)
