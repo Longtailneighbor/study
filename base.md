@@ -1,1 +1,2 @@
 - [pd.date_range](http://blog.csdn.net/you_are_my_dream/article/details/70209757)
+- [urllib.urlretrieve下载文件](http://www.nowamagic.net/academy/detail/1302861)
