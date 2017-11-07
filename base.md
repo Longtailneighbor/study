@@ -1,3 +1,4 @@
 - [pd.date_range](http://blog.csdn.net/you_are_my_dream/article/details/70209757)
 - [urllib.urlretrieve下载文件](http://www.nowamagic.net/academy/detail/1302861)
 - [jupyter显示图片](http://bbs.csdn.net/topics/392144095)
+- [KNN的基本使用](https://zhuanlan.zhihu.com/p/23191325)
