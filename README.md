@@ -4,9 +4,9 @@
 导航
 
 ### 导航 
- - 1、何红亮 、https://github.com/hhlisme/Daily
- - 2、暂时别看 https://github.com/scaufengyang/Big_Data_Resources
-
+ - 1、[何红亮](https://github.com/hhlisme/Daily)
+ - 2、[暂时别看](https://github.com/scaufengyang/Big_Data_Resources)
+ - 3、[黄广海翻译的在线ML](http://fengdu78.gitee.io/coursera-ml-andrewng-notes/)
 ### 项目案例
 - [梯度提升算法](GBDT(http://nbviewer.jupyter.org/github/liudragonfly/GBDT/blob/master/GBDT.ipynb)
 
