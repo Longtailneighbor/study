@@ -137,3 +137,8 @@
         解决方法： (A.CENTER_ACTIVITY -LEAD(A.CENTER_ACTIVITY,1,0) over(partition  by 
 	AGENT_ID order by A.TIMESS desc)),使用“公式 over （partition by 分组项 order by Timess  时间降序排列）”
 ```
+- 特征工程（疑问）
+```
+        问题：针对离散属性one hot 后删除贡献率较低的特征项？,训练出的模型精度更高？
+```
+
