@@ -143,6 +143,9 @@
 	
 	问题： 找出数据特征或分类特征的行？
 	
+	解决方法： 
+	  筛选数值特征：train_master.select_dtypes(exclude = ['object'])
+	  筛选离散特征： train_master.select_dtypes(include = ['object']) 
 	
 ```
 
