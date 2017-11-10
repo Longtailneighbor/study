@@ -146,6 +146,16 @@
 	解决方法： 
 	  筛选数值特征：train_master.select_dtypes(exclude = ['object'])
 	  筛选离散特征： train_master.select_dtypes(include = ['object']) 
+	  
+        tipS带条件的带条件的[]循环:
+	
+	[f for f in train_master.select_dtypes(exclude = ['object']).columns 
+	      if f not in(['Idx', 'target']) 
+	      and f not in binarized_features]  	  
+	
+	[ f for f in list  条件] 
+	[ f for f in list  if f  not in [list]]
+    	  
 	
 ```
 
