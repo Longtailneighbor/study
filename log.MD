@@ -159,3 +159,73 @@
 	
 ```
 
+	
+### 2017.11.10
+
+- 工作安排
+```
+ 与乙方一起解决yongyou-di project不能导出的问题
+ 优化数据清洗代码
+```
+
+- 特征工程
+```
+TIPS:统计非0项数
+
+答：np.count_nonzero
+
+
+
+TIPS:将目标列直接与target关联，生成 target,观察特征名称，观察特征数字
+
+melt = pd.melt(train_master, id_vars=['target'], value_vars = [f for f in numerical_features])
+FACEGRID 直接画大图
+g = sns.FacetGrid(data=melt, col="variable", col_wrap=4, sharex=False, sharey=False)
+g.map 描点
+g.map(sns.stripplot, 'target', 'value', jitter=True, palette="muted")
+
+
+TIPS: df 删除行 其实drop的是index
+train_master.drop(train_master[(train_master.ThirdParty_Info_Period6_1 > 250) & (train_master.target == 1)].index, inplace=True)
+
+TIPS: 填充、对数填充、删除原始数据 [f+'_log' for  f in columns]
+
+TIPS : inf判断，一般对数转换后得到-inf，inf填充一般使用-1
+答： df ==-np.inf,df.replace(-np.inf,-1,inplace =TRUE)
+其他：缺失值、异常值、处理后再观察其对照target的分布、概率密度的分布
+
+
+TIPS: 相关性检查的作用
+答：用于基础验证特征重要性
+
+
+问：python case when 
+答：单个处理使用循环：[f for f in lis if xx=xx]
+   类似ifelse但对整列处理 ：np.where(条件，1,0)
+
+   
+问：快捷的对日期进行处理(获取年月日周节假日，上下旬等）
+
+答：
+高速处理获取值
+def parse_date(date_str, str_format='YYYY/MM/DD'):
+
+    d = arrow.get(date_str, str_format)
+    # 月初，月中，月末
+    month_stage = int((d.day-1) / 10) + 1
+    return (d.timestamp, d.year, d.month, d.day, d.week, d.isoweekday(), month_stage)
+
+高速的将值与名称合并起来构成新列
+def parse_ListingInfo(date):，由于对每行都做生成series处理得到的将是一个dataframe（多行 列的series构成dataframe）
+    '''
+    input : 日期
+    output：直接获取年月日周是否周末，月阶段
+    '''
+    #Series 用来组建series， 当对列使用series时，自然就组成了矩阵，自动获取矩阵，高明
+    d = parse_date(date, 'YYYY/M/D')  
+    return Series(d, 
+                  index=['ListingInfo_timestamp', 'ListingInfo_year', 'ListingInfo_month',
+                           'ListingInfo_day', 'ListingInfo_week', 'ListingInfo_isoweekday', 'ListingInfo_month_stage'], 
+                  dtype=np.int32)
+```
+
