@@ -227,5 +227,48 @@ def parse_ListingInfo(date):，由于对每行都做生成series处理得到的�
                   index=['ListingInfo_timestamp', 'ListingInfo_year', 'ListingInfo_month',
                            'ListingInfo_day', 'ListingInfo_week', 'ListingInfo_isoweekday', 'ListingInfo_month_stage'], 
                   dtype=np.int32)
+		  
+		  
+		  
+		  
+TIPS:groupby 一层接一层的统计，实乃太爽
+	def userinfo_aggr(group):
+	    op_columns = ['_EducationId', '_HasBuyCar', '_LastUpdateDate',
+	       '_MarriageStatusId']
+
+	    #分组后-独立指标：行数、unique特征项数
+	    userinfo_num = group.shape[0]
+	    userinfo_unique_num = group['UserupdateInfo1'].unique().shape[0]
+	    userinfo_active_day_num = group['UserupdateInfo2'].unique().shape[0]
+
+	    #分组后-时间series ：最大时间、最小时间、日操作时间差
+	    min_day = parse_date(np.min(group['UserupdateInfo2']))
+	    max_day = parse_date(np.max(group['UserupdateInfo2']))
+	    gap_day = round((max_day[0] - min_day[0]) / (86400))
+
+	    indexes = {
+		'userinfo_num': userinfo_num, 
+		'userinfo_unique_num': userinfo_unique_num, 
+		'userinfo_active_day_num': userinfo_active_day_num, 
+		'userinfo_gap_day': gap_day, 
+		'userinfo_last_day_timestamp': max_day[0]
+	    }
+
+	    for c in op_columns:
+		indexes['userinfo' + c + '_num'] = 0
+
+	    # 获取分组后行数
+	    def sub_aggr(sub_group):
+		return sub_group.shape[0]
+	    # 在分组内根据userupdateinfo 更新获取新的各分组行数，并将其命名为新的列
+	    sub_group = group.groupby(by=['UserupdateInfo1']).apply(sub_aggr)
+	    for c in sub_group.index:
+		indexes['userinfo' + c + '_num'] = sub_group.loc[c]
+
+	    return Series(data=[indexes[c] for c in indexes], index=[c for c in indexes])
+
+	train_userinfo_grouped = train_userinfo.groupby(by=['Idx']).apply(userinfo_aggr)
+	train_userinfo_grouped.head()
+		  
 ```
 
