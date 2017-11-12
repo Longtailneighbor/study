@@ -104,4 +104,5 @@
 - [UAIS数据大赛](https://www.kddcup2015.com/)
 
 
-    
+### 探索性数据分析
+    -[【Kaggle实例分析】Titanic Machine Learning from Disaster](https://zhuanlan.zhihu.com/p/25185856)
