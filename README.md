@@ -7,6 +7,8 @@
  - 1、[何红亮](https://github.com/hhlisme/Daily)
  - 2、[暂时别看](https://github.com/scaufengyang/Big_Data_Resources)
  - 3、[黄广海翻译的在线ML](http://fengdu78.gitee.io/coursera-ml-andrewng-notes/)
+ - 4、[没啥价值](https://github.com/jobbole/awesome-machine-learning-cn)
+ - 5、[同样没啥价值](https://github.com/ty4z2008/Qix/blob/master/dl.md)
 ### 项目案例
 - [梯度提升算法](GBDT(http://nbviewer.jupyter.org/github/liudragonfly/GBDT/blob/master/GBDT.ipynb)
 
@@ -67,7 +69,7 @@
 - [大数据新算法在个人信用风险评估模型中使用效果的评估](http://bigdata.51cto.com/art/201611/521373.htm)
 - [2015年第四届全国大学生统计建模大赛论文](http://www.sescn.org.cn/zyxx/2015dxsjmgs/edj/B03.pdf)
 - [大数据：特征工程预测用户行为](https://zhuanlan.zhihu.com/p/24954137)
-
+- [机器学习反欺诈](http://www.codesec.net/view/242894.html)
 
 
 
@@ -106,3 +108,4 @@
 
 ### 探索性数据分析
     -[【Kaggle实例分析】Titanic Machine Learning from Disaster](https://zhuanlan.zhihu.com/p/25185856)
+    -[Spark编程指南-Python版](http://cholerae.com/2015/04/11/-%E7%BF%BB%E8%AF%91-Spark%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97-Python%E7%89%88/)
