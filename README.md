@@ -70,7 +70,7 @@
 - [2015年第四届全国大学生统计建模大赛论文](http://www.sescn.org.cn/zyxx/2015dxsjmgs/edj/B03.pdf)
 - [大数据：特征工程预测用户行为](https://zhuanlan.zhihu.com/p/24954137)
 - [机器学习反欺诈](http://www.codesec.net/view/242894.html)
-
+- [拍拍贷模型部分很好的解决方案](http://zhanghonglun.cn/blog/project/%E6%8B%8D%E7%9F%A5%E5%BF%83-%E6%9C%80%E6%87%82%E4%BD%A0%E7%9A%84%E6%99%BA%E8%83%BD%E6%8A%95%E8%B5%84%E9%A1%BE%E9%97%AE/)
 
 
 ### 探讨
