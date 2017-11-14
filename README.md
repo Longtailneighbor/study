@@ -109,3 +109,7 @@
 ### 探索性数据分析
     -[【Kaggle实例分析】Titanic Machine Learning from Disaster](https://zhuanlan.zhihu.com/p/25185856)
     -[Spark编程指南-Python版](http://cholerae.com/2015/04/11/-%E7%BF%BB%E8%AF%91-Spark%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97-Python%E7%89%88/)
+
+
+### 方法的反思
+  -[记一次失败的kaggle比赛](http://blog.csdn.net/mmc2015/article/details/51301865)
