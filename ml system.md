@@ -20,6 +20,31 @@
   dat = Read_concat_csv(file_dat, par_csv).fillna(Read_concat_csv(file_dayt, {"index_col": 0}))
 
 ```
+### EAD
+```
+* 数据基础查看
+  数据类型、行-空列比率，describle 均值等，values_count（频次最大值占比-可能涉及后续的手工分级）
+  
+  ** vaules_count(其实这个也可以带入模型进行计算)
+     不同列 特征项傻数不同，这里对前n项进行计算后，（这里后面的分为一类others）
+     
+     tmp = pd.value_counts(das).reset_index().rename_axis({"index": das.name}, axis = 1)
+     前nhead个的特征项名称
+    value = pd.DataFrame(['value {}'.format(x+1) for x in range(nhead)], index = np.arange(nhead)).join(tmp.iloc[:,0], how = "left").set_index(0).T
+     前nhead个的特征项频次（使用leftjoin）
+     freq = pd.DataFrame(['freq {}'.format(x+1) for x in range(nhead)], index = np.arange(nhead)).join(tmp.iloc[:,1], how = "left").set_index(0).T
+     前n项目
+     nnull = das.isnull().sum()
+     # others=  总行数-空行数- 前n列频数非NAN的和
+     freqother = pd.DataFrame({das.name: [das.shape[0]-nnull-np.nansum(freq.values), nnull]}, index = ["freq others", "freq NA"]).T
+     #合并几个统计指标 
+     op = pd.concat([value, freq, freqother], axis = 1)
+     
+ 
+    
+```
+
+
 ### 特征工程
 ```
 
