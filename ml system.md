@@ -2,4 +2,7 @@
 
 ### 模型选择
 
-### 常见方法
+### 刷题
+- [赛码网](http://www.acmcoder.com/index)
+- [leecode](http://leecode.com/)
+
