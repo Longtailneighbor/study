@@ -290,7 +290,11 @@ A:
 	random.shuffle(irt)
   2、随机抽样
         np.random.choice(x, len(x), replace = False)
+```
 
+### 模型验证
+
+```
 Q:交叉验证的数据准备
 A:
   1、随机分为k组：x是序号index
