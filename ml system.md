@@ -103,6 +103,133 @@
   
   ** 给清洗的数据加数据源名
      * dahc.columns = ["{}_{}".format(name, x) for x in dahc.columns] # 为了合并方便，给指定数据组命名
+     
+     
+     
+Q：针对离散属性one hot 后删除贡献率较低的特征项？,训练出的模型精度更高？
+A：合并特征项为其他，熵下降，相当于减小了数据不确定性，模型的目的就是这个嘛
+	
+Q：找出数据特征或分类特征的行？
+A： 
+  筛选数值特征：train_master.select_dtypes(exclude = ['object'])
+  筛选离散特征： train_master.select_dtypes(include = ['object']) 
+
+Q:[tipS] [for] 循环里带复杂条件案例:
+	
+A:	
+  eg:[f for f in train_master.select_dtypes(exclude = ['object']).columns 
+	      if f not in(['Idx', 'target']) 
+	      and f not in binarized_features]  	  
+  structure：   
+	[ f for f in list  条件] 
+	[ f for f in list  if f  not in [list]]     
+  
+  
+Q:[TIPS]统计非0项数
+
+A：np.count_nonzero
+
+Q:[TIPS] 将每一列与target 构成组图（连续数据-数值）
+A:
+  1、将目标列直接与target关联(生成 target,观察特征名称，观察特征数字)
+    melt = pd.melt(train_master, id_vars=['target'], value_vars = [f for f in numerical_features])
+  2、生成facegrid 组合图
+    g = sns.FacetGrid(data=melt, col="variable", col_wrap=4, sharex=False, sharey=False)
+    #g.map 描点
+    g.map(sns.stripplot, 'target', 'value', jitter=True, palette="muted")
+
+
+Q:[TIPS]: df 删除行 其实drop的是index(以前只知道删除列，或行号)
+A:train_master.drop(train_master[(train_master.ThirdParty_Info_Period6_1 > 250) & (train_master.target == 1)].index, inplace=True)
+
+Q:[TIPS]:对新形成的数据规范命名（如：对one hot 或新处理出来的列添加名称）
+A： [f+'_log' for  f in columns]
+    附：如果是相似列填充、对数处理等后一般会删除原始列，不然会相似度极高
+
+Q:[TIPS]  inf判断;一般对数转换后得到-inf需填充；inf填充一般使用-1
+A： df ==-np.inf,df.replace(-np.inf,-1,inplace =TRUE)
+
+Q:[TIPS] 数据填充、异常值处理后观察什么
+A:观察其对照target的分布、概率密度的分布
+
+
+Q:[TIPS]: 相关性检查-两两columns组对检查
+A：验证高度相关性，
+
+
+Q：python 里的 case when 
+A：单个处理使用循环：[f for f in lis if xx=xx]
+   类似ifelse但对整列处理 ：np.where(条件，1,0)
+
+   
+Q：快捷的对日期进行处理(获取年月日周节假日，上下旬等）
+A：
+  def parse_date(date_str, str_format='YYYY/MM/DD'):
+      d = arrow.get(date_str, str_format)
+      # 月初，月中，月末
+      month_stage = int((d.day-1) / 10) + 1
+      return (d.timestamp, d.year, d.month, d.day, d.week, d.isoweekday(), month_stage)
+      
+ eg:#parse_date('2017/05/11', str_format='YYYY/MM/DD')
+
+Q:用tuple与name 生成series (这个还是不没那么清晰，写法复杂了，场景没写)
+A:
+  def parse_ListingInfo(date):
+      #由于对每行都做生成series处理得到的将是一个dataframe（多行 列的series构成dataframe）
+      '''
+      input : 日期
+      output：直接获取年月日周是否周末，月阶段
+      '''
+      #Series 用来组建series， 当对列使用series时，自然就组成了矩阵，自动获取矩阵，高明
+      d = parse_date(date, 'YYYY/M/D')  
+      return pd.Series(d, 
+                    index=['ListingInfo_timestamp', 'ListingInfo_year', 'ListingInfo_month',
+                             'ListingInfo_day', 'ListingInfo_week', 'ListingInfo_isoweekday', 'ListingInfo_month_stage'], 
+                    dtype=np.int32)
+
+  eg: #parse_ListingInfo('2017/05/11')  
+		  
+Q:[TIPS]在groupby里进行舒服的要死的各类计算
+A:
+	def userinfo_aggr(group):
+	    op_columns = ['_EducationId', '_HasBuyCar', '_LastUpdateDate',
+	       '_MarriageStatusId']
+
+	    #分组后-独立指标：行数、unique特征项数
+	    userinfo_num = group.shape[0]
+	    userinfo_unique_num = group['UserupdateInfo1'].unique().shape[0]
+	    userinfo_active_day_num = group['UserupdateInfo2'].unique().shape[0]
+
+	    #分组后-时间series ：最大时间、最小时间、日操作时间差
+	    min_day = parse_date(np.min(group['UserupdateInfo2']))
+	    max_day = parse_date(np.max(group['UserupdateInfo2']))
+	    gap_day = round((max_day[0] - min_day[0]) / (86400))
+      #生成输出字典
+	    indexes = {
+          'userinfo_num': userinfo_num, 
+          'userinfo_unique_num': userinfo_unique_num, 
+          'userinfo_active_day_num': userinfo_active_day_num, 
+          'userinfo_gap_day': gap_day, 
+          'userinfo_last_day_timestamp': max_day[0]
+            }
+      #给新生成的数据加上列名buff
+	    for c in op_columns:
+		    indexes['userinfo' + c + '_num'] = 0
+	    # 分组小组中进行二次分组（两个特征的情况下），获取二次分组的行数
+	   def sub_aggr(sub_group):
+		      return sub_group.shape[0]
+	    # 在分组内根据userupdateinfo 更新获取新的各分组行数，并将其命名为新的列
+	    sub_group = group.groupby(by=['UserupdateInfo1']).apply(sub_aggr)
+	    # 给二次分组的得到的特征项加列buff
+      for c in sub_group.index:
+		    indexes['userinfo' + c + '_num'] = sub_group.loc[c] #series.loc[index]取value
+      #生成series(data,index) ,对dict循环，返回的是key
+	    return Series(data=[indexes[c] for c in indexes], index=[c for c in indexes]) 
+eg:
+	train_userinfo_grouped = train_userinfo.groupby(by=['Idx']).apply(userinfo_aggr)
+	train_userinfo_grouped.head()  
+  
+
 ```
 
 
