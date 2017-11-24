@@ -292,7 +292,7 @@ A:
         np.random.choice(x, len(x), replace = False)
 ```
 
-### 模型验证
+### 建模框架及验证过程
 
 ```
 Q:交叉验证的数据准备
@@ -348,7 +348,8 @@ A:
 	    return(modelL)  
 	    
     5、模型效果的交叉验证
-   	
+       注：
+          ** 和模型训练一样，还是控制ig参数控制测试组，构架测试正式数据，并进行预测汇总   	
 	#对模型效果进行预测
 	def CrossValid(x, y, irtL, modelL):
 	    yt2pL = []
