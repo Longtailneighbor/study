@@ -228,8 +228,133 @@ A:
 eg:
 	train_userinfo_grouped = train_userinfo.groupby(by=['Idx']).apply(userinfo_aggr)
 	train_userinfo_grouped.head()  
-  
+```
 
+### 建模前的整体数据处理
+
+```
+Q:排名处理--连续变量
+A:忽略数据大小，将数据换成排名 df.rank(pct= True) 转化为百分比形式
+eg：
+	x[0:10]['ThirdParty_Info_13_max']
+	Idx
+	10001    27937.5
+	10002     8605.0
+	10003     6935.5
+	10006     1198.5
+	10007      334.0
+	10008    47080.5
+	10011     6458.5
+	10015        0.0
+	10019     9599.0
+	10021     3868.0
+	
+	#转换为名次
+	x[0:10]['ThirdParty_Info_13_max'].rank()
+	Idx
+	10001     9.0
+	10002     7.0
+	10003     6.0
+	10006     3.0
+	10007     2.0
+	10008    10.0
+	10011     5.0
+	10015     1.0
+	10019     8.0
+	10021     4.0	
+	#转换为名次/行数 比率
+	x[0:10]['ThirdParty_Info_13_max'].rank(pct = True)
+	
+	Idx
+	10001    0.9
+	10002    0.7
+	10003    0.6
+	10006    0.3
+	10007    0.2
+	10008    1.0
+	10011    0.5
+	10015    0.1
+	10019    0.8
+	10021    0.4
+
+Q:整体数据正太化
+A:df.apply(st.norm.ppf)
+ 注：数据压缩到均值为0
+ 1、rank(pct=True) 将数据处理为[0,1]的"均值压缩为0的方法是减0.5/df.shape[0]
+    df.rank(pct=True)-0.5/df.shape[0]
+ 	
+Q:[TIPS] 打乱顺序的方法
+A:
+  1、shuffle
+  	import random
+	random.shuffle(irt)
+  2、随机抽样
+        np.random.choice(x, len(x), replace = False)
+
+Q:交叉验证的数据准备
+A:
+  1、随机分为k组：x是序号index
+	def Kfolds(x, k = 10, seed = 1):
+	    '''
+	    随机抽样
+	    np.split 直接分
+	    '''
+	    np.random.seed(seed) # 随机种子
+	    #随机不重复的分成k份array
+	    xL = np.array_split(np.random.choice(x, len(x), replace = False), k) 
+	    return(xL)	
+    #eg:irtL = Kfolds(irt, k = 10)
+  2、选中一组，构建训练exgrp的序号,构建测试 ingrp的序号
+     注：
+       ** 不写循环的list合并:sum([list(x) for x in xLc], [])
+       ** list指定pop出某个值：list.pop(i)
+	def GroupSelect(xL, i = 0):
+	    # 从分成的k 中 pop 出来第n 组
+	    xLc = xL.copy() #保证数据不变
+	    ingrp = list(xLc.pop(i))
+	    exgrp = sum([list(x) for x in xLc], [])
+	    return(ingrp, exgrp)  
+
+  3、在训练集上构建交叉验证集
+    注：
+     **  df.loc[index].values 获取array值
+     **  通过控制ig，控制从分组里pop第ig个，其余作为训练集  
+	def TrainSet(x, y, irtL, ig = 0):
+	    '''
+	    测试集上构建训练与交叉验证的数据源，这里默认ig=0，后面要变
+	    '''
+	    irt2, irt1 = GroupSelect(irtL, i = ig)
+	    xt1, xt2 = x.loc[irt1].values, x.loc[irt2].values
+	    yt1, yt2 = y.loc[irt1].values, y.loc[irt2].values
+	    return(xt1, xt2, yt1, yt2) 
+	    
+   4、对模型进行训练
+     注：
+       ** 采用ig 控制哪个模块用来做测试集
+       ** 为每一组模型设置了seed随机种子
+       ** "**kwargs" 这样的参数处理形式
+	def CrossTrain(x, y, irtL, fmodel, **kwargs):
+	    '''
+	    对模型使用交叉验证
+	    '''
+	    modelL = []
+	    for i in range(len(irtL)):
+		xt1, xt2, yt1, yt2 = TrainSet(x, y, irtL, ig = i)
+		modelL.append(fmodel(xt1, xt2, yt1, yt2, seed = i, **kwargs))
+	    return(modelL)  
+	    
+    5、模型效果的交叉验证
+   	
+	#对模型效果进行预测
+	def CrossValid(x, y, irtL, modelL):
+	    yt2pL = []
+	    for i in range(len(irtL)):
+		xt1, xt2, yt1, yt2 = TrainSet(x, y, irtL, ig = i)
+		yt2p = ModelPredict(xt2, modelL[i])
+		yt2pL.append(yt2p)
+	    return(yt2pL)	
+	
+	
 ```
 
 
