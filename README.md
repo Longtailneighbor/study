@@ -114,3 +114,6 @@
 ### 方法的反思
   -[记一次失败的kaggle比赛](http://blog.csdn.net/mmc2015/article/details/51301865)
   -[模型融合几种方法]（http://blog.csdn.net/a819825294/article/details/51699985）
+  
+### 组装好的软件
+-[vm-cloudera](https://www.cloudera.com/documentation/enterprise/latest/topics/cloudera_quickstart_vm.html)
